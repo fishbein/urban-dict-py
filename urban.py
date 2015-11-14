@@ -16,5 +16,3 @@ def random():
 	page = requests.get("http://urbandictionary.com/random.php")
 	tree = html.fromstring(page.content)
 	return define(tree.xpath('//a[@class="word"]/text()')[0])
-
-print random()
